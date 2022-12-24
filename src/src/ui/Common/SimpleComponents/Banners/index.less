@@ -1,0 +1,13 @@
+@import "../../../styles/variables";
+
+.banner-row {
+  display: grid;
+  gap: @base * 9;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: @window_size-sm) {
+  .banner-row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

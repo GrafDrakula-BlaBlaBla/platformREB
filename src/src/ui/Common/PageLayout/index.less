@@ -1,0 +1,154 @@
+@import "src/ui/styles/variables";
+
+.page-layout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+
+    div + & {
+      margin-top: @base * 4;
+    }
+
+    &-info {
+      flex: 1 1 auto;
+      min-height: @base * 12 + 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    &-back {
+      display: inline-flex;
+      align-items: center;
+
+      &__text {
+        color: @color-navy;
+        .font-regular();
+        margin-left: @base * 2;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover svg path {
+        fill: @color-light-blue;
+      }
+      &:hover &__text {
+        color: @color-light-blue;
+      }
+    }
+    &-title {
+      .font-large-title();
+      display: flex;
+
+      &-extra {
+        display: flex;
+        align-items: center;
+        margin-left: @base * 4;
+        font-weight: normal;
+
+        &:before {
+          content: "";
+          display: flex;
+          width: @base;
+          height: @base;
+          border-radius: @base / 2;
+          background-color: @color-actions-no-active;
+          margin-right: @base * 4;
+        }
+      }
+
+      div + & {
+        margin-top: @base * 3;
+      }
+    }
+    &-subtitle {
+      .font-regular();
+      color: @color-gray;
+
+      div + & {
+        margin-top: @base * 2;
+      }
+    }
+    &-buttons {
+      & > .btn {
+        margin-left: @base * 4;
+      }
+    }
+    &-filters {
+      & > .field-control {
+        margin-left: @base * 4;
+      }
+    }
+  }
+  &__subtitle {
+    div + & {
+      margin-top: @base * 4;
+    }
+
+    & .notify + .notify {
+      margin-top: @base * 4;
+    }
+  }
+
+  &__body {
+    background: @color-white;
+    box-shadow: 0 0 18px rgba(200, 212, 224, 0.35);
+    border-radius: @border-radius-default;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    div + & {
+      margin-top: @base * 4;
+    }
+
+    &_no-bottom-radius {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &_default {
+      padding: @base * 8;
+    }
+    &_tabs {
+    }
+    &_table {
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    background-color: @color-white;
+    border-top: 1px solid #dfe5ea;
+    padding: @base * 10 @base * 8;
+    position: relative;
+    border-bottom-right-radius: @border-radius-default;
+    border-bottom-left-radius: @border-radius-default;
+
+    &-text {
+      display: flex;
+      align-items: center;
+      color: #a6a6a6;
+      .font-regular();
+      padding-right: @base * 5;
+    }
+    &-buttons {
+      .btn {
+        margin-left: @base * 4;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

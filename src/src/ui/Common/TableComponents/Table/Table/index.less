@@ -1,0 +1,30 @@
+@import "../../../../styles/variables";
+
+.table {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  position: relative;
+
+  &__container {
+    flex: 1 1 auto;
+  }
+  &_padding_top {
+    padding-top: @base * 3;
+  }
+  &_padding &__container {
+    padding: @base * 3 @base * 6 @base * 6;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    box-shadow: none;
+    min-width: @base*162 + 2;
+  }
+
+  &__checkbox {
+    width: @base*5;
+    height: @base*5;
+  }
+}

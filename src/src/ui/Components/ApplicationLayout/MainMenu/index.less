@@ -1,0 +1,146 @@
+@import "../../../styles/variables";
+
+.menu-decoration(@width) {
+  content: "";
+  position: absolute;
+  width: @width;
+  height: 100%;
+  background-color: hsl(199, 100%, 41%);
+  left: -1px;
+  top: 0;
+  border-top-right-radius: @base;
+  border-bottom-right-radius: @base;
+}
+
+.SubMenu-Item-offset(@offset) when (@offset > 0) {
+  padding: 0 0 0 calc(@offset * 25px);
+}
+
+.MainMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: @color-white;
+  user-select: none;
+  width: @base * 56;
+  min-height: calc(100vh - @base * 21);
+  height: auto;
+  .z-index-middle();
+
+  a {
+    text-decoration: none;
+  }
+
+  .MainMenu-Item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-height: @base*16;
+    cursor: pointer;
+
+    .MainMenu-Link {
+      display: flex;
+      width: 100%;
+      padding: @base*5+2 0 @base*5+2 @base*5;
+    }
+
+    .MainMenu-Arrow {
+      position: absolute;
+      right: @base*4;
+
+      path {
+        fill: #9ba3b0;
+      }
+    }
+
+    &::after {
+      .menu-decoration(0);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        .menu-decoration(@base);
+      }
+    }
+
+    .Link-Logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .Link-Text {
+      margin-left: @base * 3;
+      .font-regular();
+      color: @color-black;
+    }
+
+    &.MainMenu-Item_active {
+      background-color: rgba(0, 143, 210, 0.1);
+      color: @color-light-blue;
+
+      path {
+        fill: #008fd2;
+      }
+
+      .Link-Text {
+        color: @color-light-blue;
+        .font-subtitle();
+      }
+
+      &::after {
+        .menu-decoration(@base);
+      }
+    }
+
+    path {
+      fill: #52b6e5;
+    }
+  }
+
+  .SubMenu-Item {
+    padding: 0 0 0 25px;
+  }
+
+  .MuiCollapse-wrapper
+    .MainMenu-Item:nth-child(3)
+    + .SubMenu
+    > .MuiCollapse-wrapper
+    > .MuiCollapse-wrapperInner
+    > .SubMenu-Item {
+    padding: 0 0 0 50px;
+  }
+
+  transition: left 0.5s;
+
+  & .ItemSupportInfo {
+    position: fixed;
+    bottom: 0;
+    width: @base * 56;
+    background-color: @color-white;
+
+    & .IconSupportInfo path {
+      fill: @color-actions-no-active;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: @window_size-lg) {
+  .MainMenu {
+    position: absolute;
+    left: -224px;
+    box-shadow: 0 @base - 1 @base*4+2 rgba(200, 212, 224, 0.35);
+    height: 100%;
+  }
+
+  .MainMenu_show {
+    left: 0;
+  }
+}

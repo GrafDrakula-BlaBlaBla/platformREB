@@ -1,0 +1,29 @@
+@import "../../../../styles/variables.less";
+
+.tag-segment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border: 1px solid #f4f5f7;
+  border-radius: 50px;
+  background-color: #f4f5f7;
+  box-sizing: border-box;
+  user-select: none;
+  transition: all 0.2s linear;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.tag-segment_checked {
+    background: #f1f9fc;
+    border: 1px solid rgba(0, 143, 210, 0.1);
+    box-sizing: border-box;
+    border-radius: 50px;
+  }
+
+  & .tag-segment_label {
+    .font-regular();
+  }
+}

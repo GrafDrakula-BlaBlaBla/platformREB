@@ -1,0 +1,124 @@
+@import "../../../../styles/variables.less";
+
+.top-content {
+  flex: 1 1 auto;
+  display: flex;
+  padding: @base*7 0;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    flex-basis: 50%;
+    padding-right: 50px;
+  }
+
+  &__right {
+    height: 100%;
+    width: 50%;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    font-size: 52px;
+    line-height: normal;
+    font-weight: 500;
+    color: @color-white;
+    margin-bottom: @base*7;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: normal;
+    color: @color-white;
+    margin-bottom: @base*7;
+  }
+
+  &__button {
+    padding: 16px 64px;
+    border-radius: @border-radius-default;
+    background-color: @color-white;
+    color: @color-light-blue;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .top-content {
+    flex-direction: column-reverse;
+
+    &__left {
+      width: 100%;
+      flex-basis: 40%;
+      padding: 0 150px;
+      align-items: center;
+    }
+
+    &__right {
+      width: 100%;
+      flex-basis: 60%;
+    }
+
+    &__name {
+      font-size: 42px;
+      text-align: center;
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .top-content {
+    &__left {
+      flex-basis: 50%;
+      padding: 0 20px;
+    }
+
+    &__right {
+      flex-basis: 50%;
+      & svg {
+        width: 350px;
+        height: auto;
+      }
+    }
+
+    &__name {
+      font-size: 37px;
+    }
+  }
+}
+
+@media (max-width: @window_size-xs) {
+  .top-content {
+    &__left {
+      padding: 0;
+    }
+
+    &__right {
+      & svg {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+  }
+}

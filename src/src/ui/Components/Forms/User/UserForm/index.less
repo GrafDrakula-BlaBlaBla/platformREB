@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.less";
+
+.user-form {
+  position: relative;
+
+  &.hide-ter-bank {
+    overflow: hidden;
+  }
+
+  & .form-field.user-form__ter-bank {
+    margin-bottom: -@base*26;
+    transition: 0.5s all ease;
+  }
+
+  & .form-field.show-ter-bank {
+    margin-bottom: 0;
+    transition: 0.5s all ease;
+  }
+
+  & .field-control_is-edit {
+    max-width: 400px;
+  }
+}

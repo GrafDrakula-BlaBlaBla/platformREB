@@ -1,0 +1,42 @@
+@import "../../../../styles/variables.less";
+
+.deals-pie-chart {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__legend {
+    display: grid;
+    gap: @base * 2 @base * 4;
+    grid-template-columns: fit-content(50%) fit-content(50%);
+    justify-content: center;
+    overflow: hidden;
+
+    &-item {
+      display: flex;
+      overflow: hidden;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      &__rect {
+        flex: 0 0 auto;
+        margin-right: @base * 3;
+        width: @base * 4;
+        height: @base * 4;
+        border-radius: @base / 2;
+      }
+      &__label {
+        flex: 1 1 auto;
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../../../styles/variables.less";
+
+.bank-settings-territorial-banks {
+  & .territorial-bank {
+    margin-bottom: @base * 3;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__add {
+    &.btn {
+      display: flex;
+      width: 100%;
+      max-width: @base * 126;
+    }
+    &-icon {
+      color: @color-actions-no-active;
+    }
+    &-label {
+      margin-left: @base * 2;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/variables.less";
+
+.dashboard-filter {
+  margin-top: @base * 4;
+  padding: @base * 8;
+  background-color: @color-white;
+  border-radius: @border-radius-default;
+
+  & .field-control {
+    width: 200px;
+  }
+  & .date-interval-field-control {
+    width: auto;
+
+    & .field-control {
+      width: 200px;
+    }
+  }
+}

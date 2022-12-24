@@ -1,0 +1,49 @@
+@import "./variables";
+@import "./helpers";
+@import "./colors";
+@import "./roboto";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: @color-page-background;
+  margin: 0;
+  .font-regular();
+
+  // Костыль чтобы работали переносы строки в i18n
+  #root {
+    white-space: pre-line;
+  }
+}
+
+a,
+.link {
+  color: @color-navy;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @color-light-blue;
+  }
+
+  &_disabled,
+  &_disabled:hover {
+    color: @color-gray;
+    cursor: not-allowed;
+  }
+}
+
+* {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}

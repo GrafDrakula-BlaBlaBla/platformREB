@@ -1,0 +1,27 @@
+@import "../../../../styles/variables.less";
+
+.dialog-cfa-draft-confirm {
+  &.modal {
+    &.MuiDialog-root {
+      & .MuiDialog-paperWidthSm {
+        min-width: @base * 288;
+      }
+    }
+  }
+}
+
+@media (max-width: @window_size-lg) {
+  .dialog-cfa-draft-confirm {
+    &.modal {
+      &.MuiDialog-root {
+        & .MuiDialog-paperWidthSm {
+          @margin: (@base * 8);
+          max-width: calc(100% - @margin);
+          max-height: calc(100% - @margin);
+          min-width: auto;
+          border-radius: @base;
+        }
+      }
+    }
+  }
+}

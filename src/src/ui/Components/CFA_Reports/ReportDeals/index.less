@@ -1,0 +1,33 @@
+@import "../../../styles/variables.less";
+
+.report-deals {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  & > .form-section__content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .table {
+    border: 1px solid @color-separation-line;
+    border-radius: @border-radius-default;
+    min-height: @base * 50;
+
+    &-pagination {
+      border-bottom-right-radius: @border-radius-default;
+      border-bottom-left-radius: @border-radius-default;
+    }
+
+    &-row__cell:first-child,
+    &-header__cell:first-child {
+      padding-left: @base * 5;
+    }
+    &-row__cell:last-child,
+    &-header__cell:last-child {
+      padding-right: @base * 5;
+    }
+  }
+}

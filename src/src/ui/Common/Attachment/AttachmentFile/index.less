@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.attachment-file {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  .button.MuiButton-root {
+    .font-subtitle();
+    text-transform: none;
+    padding: @base * 4 @base * 5;
+    width: @base * 45;
+    height: @base * 13;
+  }
+}
+
+.tabs__panel_default {
+  & .attachment-file {
+    & .attachment-table {
+      margin-top: -@base * 4;
+
+      & .table-pagination {
+        margin: @base * 4 -@base * 8 -@base * 8;
+      }
+    }
+    & .attachment-drop-zone + .attachment-table {
+      margin-top: @base * 6;
+    }
+  }
+}

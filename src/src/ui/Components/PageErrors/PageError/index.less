@@ -1,0 +1,47 @@
+@import "../../../styles/variables.less";
+
+.page-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #ffffff;
+  background-image: url("../../../../assets/svg/page404/backgroundPage404.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto, 70%;
+
+  &__content {
+    flex: 1 1 auto;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: @base * 24;
+
+    &-title {
+      color: @color-light-blue;
+      font-size: @base * 40 + 3;
+      line-height: normal;
+      font-weight: 600;
+    }
+
+    &-text {
+      font-size: @base * 4 + 2;
+    }
+
+    &-button.btn {
+      margin-top: @base * 21 + 2;
+    }
+  }
+  &__footer {
+    width: 100%;
+    text-align: center;
+    margin: @base * 12;
+    color: @color-gray;
+  }
+}

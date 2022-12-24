@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    .font-large-title();
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title + &__content {
+    margin-top: @base * 10;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../../../styles/variables.less";
+
+.top-chevron {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    border-radius: 28px;
+    padding: 6px;
+    background-color: fade(@color-white, 20);
+
+    &-inner {
+      height: 100%;
+      width: 100%;
+      border-radius: 22px;
+      background-color: fade(@color-white, 50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover &-inner {
+      background-color: fade(@color-white, 30);
+    }
+  }
+}

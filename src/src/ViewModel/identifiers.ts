@@ -1,0 +1,46 @@
+export const VIEW_MODEL = {
+  Accreditation: Symbol.for('AccreditationViewModel'),
+  AccreditationList: Symbol.for('AccreditationListViewModel'),
+  App: Symbol.for('AppViewModel'),
+  Notifications: Symbol.for('NotificationViewModel'),
+  Attachments: Symbol.for('AttachmentsViewModel'),
+  Credits: Symbol.for('CreditsViewModel'),
+  Registries: Symbol.for('RegistriesViewModel'),
+  Reports: Symbol.for('ReportsViewModel'),
+  CFA_Reports: Symbol.for('CFA_ReportsViewModel'),
+  Messages: Symbol.for('MessagesViewModel'),
+  Banks: Symbol.for('BanksViewModel'),
+  BankSettings: Symbol.for('BankSettings'),
+  User: Symbol.for('UserViewModel'),
+  Filters: Symbol.for('FilterViewModel'),
+  Menu: Symbol.for('MenuViewModel'),
+  Bic: Symbol.for('BicViewModel'),
+  Support: Symbol.for('SupportViewModel'),
+  Dictionary: Symbol.for('DictionaryViewModel'),
+  Discussion: Symbol.for('DiscussionViewModel'),
+
+  CFAList: Symbol.for('CFAListViewModel'),
+  CFARequest: Symbol.for('CFARequestViewModel'),
+  CFADocument: Symbol.for('CFADocumentViewModel'),
+  CFAGeneralAgreement: Symbol.for('CFAGeneralAgreementViewModel'),
+  CFACreditContract: Symbol.for('CFACreditContractViewModel'),
+  CFAExportContract: Symbol.for('CFAExportContractViewModel'),
+  CFAExportContractPreliminary: Symbol.for(
+    'CFAExportContractPreliminaryViewModel'
+  ),
+  CFAAccreditive: Symbol.for('CFAAccreditive'),
+
+  CFADraft: Symbol.for('CFADraftViewModel'),
+  CFADraftDocument: Symbol.for('CFADraftDocumentViewModel'),
+  CFADraftExportContract: Symbol.for('CFADraftExportContractViewModel'),
+  CFADraftList: Symbol.for('CFADraftListViewModel'),
+
+  PageLifeCycle: Symbol.for('LifeCycle'),
+
+  Dashboard: Symbol.for('DashboardViewModel'),
+  WidgetDeals: Symbol.for('WidgetDealsViewModel'),
+  WidgetCredit: Symbol.for('WidgetCreditViewModel'),
+  WidgetIndustry: Symbol.for('WidgetIndustryViewModel'),
+  WidgetCountries: Symbol.for('WidgetCountriesViewModel'),
+  WidgetExport: Symbol.for('WidgetExportViewModel'),
+};

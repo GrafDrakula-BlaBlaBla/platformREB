@@ -1,0 +1,33 @@
+@import "../../../../styles/variables.less";
+
+.widget-deals {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+
+  &__header {
+    display: flex;
+    flex: 0 0 auto;
+    padding: @base * 8 @base * 8 0 @base * 8;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &__content {
+    flex: 1 1 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: @base * 8;
+    display: grid;
+    gap: @base * 8;
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+  }
+  &__chart {
+    display: flex;
+    overflow: hidden;
+  }
+}

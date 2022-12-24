@@ -1,0 +1,34 @@
+@import "../../../../styles/variables.less";
+
+.bic-form {
+  .bic-form__text-field {
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]
+      .MuiAutocomplete-endAdornment,
+    .MuiAutocomplete-endAdornment {
+      top: auto;
+      right: 12px;
+      position: absolute;
+    }
+  }
+
+  .bic-form__error {
+    color: @color-red;
+    font-size: @base*3;
+    margin-top: @base*2 + 2;
+    letter-spacing: 0.03333em;
+  }
+
+  &__list-item {
+    display: flex;
+    &-code {
+    }
+    &-name {
+      margin-left: @base * 2;
+      color: @color-label-text;
+    }
+  }
+}
+
+.MuiAutocomplete-option {
+  font-size: 14px;
+}

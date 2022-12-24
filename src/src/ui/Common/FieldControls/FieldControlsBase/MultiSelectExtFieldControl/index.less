@@ -1,0 +1,71 @@
+@import "../../../../styles/variables.less";
+
+.multi-select-ext-field-control {
+  &__menu {
+    & .MuiPaper-root {
+      max-height: @base * 106;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    & .checkbox-field-control {
+      & .MuiFormControlLabel-root {
+        margin-right: 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      padding: 0 12px;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: fade(@color-black, 4);
+      }
+
+      &_no-data {
+        color: @color-gray;
+        padding: @base * 3;
+        text-align: center;
+      }
+    }
+  }
+
+  &__search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: @base * 3;
+    flex: 0 0 auto;
+
+    & .field-control {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    overflow: auto;
+    padding-bottom: @base * 3;
+  }
+
+  &__buttons {
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: @base * 3;
+    display: flex;
+    justify-content: flex-end;
+    border-top: solid 1px @color-separation-line;
+    background-color: @color-lightest-gray-blue;
+
+    & > .btn {
+      margin-left: @base * 3;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

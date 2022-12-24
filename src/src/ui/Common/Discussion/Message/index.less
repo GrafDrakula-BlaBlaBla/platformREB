@@ -1,0 +1,37 @@
+@import "../../../styles/variables.less";
+
+.message {
+  display: flex;
+  flex-direction: column;
+
+  .message__papper.self {
+    background-color: @color-white;
+    border-radius: @base*2 0 @base*2 @base*2;
+    align-self: end;
+  }
+
+  .message__papper {
+    display: inline-block;
+    align-self: start;
+    padding: @base*6;
+    border-radius: 0 @base*2 @base*2 @base*2;
+    background-color: @color-page-background;
+    margin: @base*3 0;
+
+    .message__title {
+      .font-regular();
+      font-weight: 500;
+
+      .message__time {
+        .font-regular();
+        font-weight: 400;
+        opacity: 0.4;
+        margin-left: @base*3;
+      }
+    }
+
+    .message__text {
+      margin-top: @base*2;
+    }
+  }
+}

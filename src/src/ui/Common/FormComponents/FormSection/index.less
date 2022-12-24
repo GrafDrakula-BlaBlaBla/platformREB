@@ -1,0 +1,100 @@
+@import "../../../styles/variables.less";
+
+.form-section {
+  margin-bottom: @base * 8;
+
+  & + .divider-custom.MuiDivider-root {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: @base * 6;
+
+    &-left {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+
+      &-text {
+        flex: 1 1 auto;
+        display: flex;
+      }
+      &-collapse {
+        display: flex;
+        align-items: center;
+        margin-left: @base * 5;
+        color: @color-gray;
+
+        & .MuiSvgIcon-root {
+          font-size: 28px;
+        }
+      }
+    }
+    &-right {
+      flex: 0 0 auto;
+      margin-left: @base * 5;
+    }
+  }
+  &_collapsible &__title {
+    &-left {
+      cursor: pointer;
+    }
+  }
+  &_collapsed &__title {
+    margin-bottom: 0;
+  }
+
+  &__label {
+    font-size: @base * 6;
+    line-height: normal;
+    font-weight: 500;
+  }
+  &_collapsible &__label {
+    cursor: pointer;
+  }
+
+  &__subtitle {
+    color: rgba(@color-black, 0.4);
+    font-size: @base * 4;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: @base * 4;
+  }
+  &_collapsed &__subtitle {
+    margin-bottom: 0;
+  }
+
+  &__help {
+    display: flex;
+    align-items: center;
+    color: @color-orange;
+    margin-left: @base * 2;
+  }
+
+  &__content {
+    position: relative;
+
+    &_right {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &_left {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &_center {
+      display: flex;
+      justify-content: center;
+    }
+    &_collapsed {
+      display: none;
+    }
+  }
+}

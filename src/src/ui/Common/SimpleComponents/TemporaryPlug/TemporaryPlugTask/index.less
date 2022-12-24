@@ -1,0 +1,65 @@
+@import "../../../../styles/variables";
+
+.temporary-plug-task {
+  display: flex;
+  padding: @base * 8;
+  box-shadow: 0 0 18px rgba(200, 212, 224, 0.5);
+  border-radius: @base;
+  transition: .5s all ease;
+  background-color: @color-white;
+
+  &:hover {
+    box-shadow: 0 14px 40px rgba(86, 91, 99, 0.3);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: @color-input-disabled url("../../../../../assets/svg/home/Hexagon.svg") no-repeat;
+    background-size: cover;
+    transition: 1s all ease;
+    margin-right: @base * 6;
+
+    & path {
+      transition: .5s all ease;
+    }
+  }
+  &:hover &__left {
+    & path {
+      fill: @color-light-blue;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    &-title {
+      font-size: 24px;
+    }
+
+    &-info {
+      color: @color-gray;
+      margin-top: @base * 4
+    }
+  }
+
+  &__link {
+    margin-top: @base * 4
+  }
+}

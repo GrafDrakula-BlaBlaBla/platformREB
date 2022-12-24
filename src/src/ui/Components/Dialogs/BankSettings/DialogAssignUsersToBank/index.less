@@ -1,0 +1,49 @@
+@import "../../../../styles/variables.less";
+
+.dialog-assign-users-to-bank {
+  &__row {
+    display: flex;
+    margin-bottom: @base * 4;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    justify-content: center;
+  }
+  &__fio {
+    &_bold {
+      font-weight: 500;
+    }
+  }
+  &__email {
+    margin-top: @base * 2;
+    color: @color-gray;
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 1 50%;
+    overflow: hidden;
+
+    & .select-field-control {
+      flex: 1 1 auto;
+    }
+  }
+  &__remove {
+    color: @color-actions-no-active;
+    display: flex;
+    align-items: center;
+    margin-left: @base * 5;
+
+    &:hover {
+      cursor: pointer;
+      color: @color-actions-active;
+    }
+  }
+}

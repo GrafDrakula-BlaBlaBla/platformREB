@@ -1,0 +1,16 @@
+@import "../../../../styles/variables.less";
+
+.dialog-curator {
+  &.MuiDialog-root .MuiDialog-paperWidthSm {
+    min-height: auto;
+    min-width: @base * 160;
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .dialog-curator {
+    &.MuiDialog-root .MuiDialog-paperWidthSm {
+      min-width: auto;
+    }
+  }
+}

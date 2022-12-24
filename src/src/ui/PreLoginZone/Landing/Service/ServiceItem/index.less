@@ -1,0 +1,26 @@
+@import "../../../../styles/variables.less";
+
+.service-item {
+  background-color: @color-white;
+  border-radius: @border-radius-default;
+  box-shadow: 0 4px 20px rgba(200, 212, 224, 0.5);
+  padding: 30px;
+
+  &__icon {
+    margin-bottom: 40px;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 36px;
+  }
+  &__name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 1.4;
+    color: @color-actions-active;
+    margin-top: 20px;
+  }
+}

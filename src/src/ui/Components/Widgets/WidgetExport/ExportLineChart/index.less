@@ -1,0 +1,31 @@
+@import "../../../../styles/variables.less";
+
+.export-line-chart {
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: @base * 5 @base * 5 @base;
+
+  .recharts-wrapper {
+    & .recharts-surface {
+      overflow: visible;
+    }
+    & .recharts-cartesian-grid-vertical line:last-child {
+      stroke-opacity: 0;
+    }
+  }
+
+  &__tooltip {
+    padding: @base * 3 @base * 4;
+    background: @color-tooltip;
+    box-sizing: border-box;
+    border-radius: @border-radius-default;
+    color: @color-white;
+
+    &__label {
+    }
+    &__value {
+      margin-top: @base * 2;
+    }
+  }
+}

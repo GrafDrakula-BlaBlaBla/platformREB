@@ -1,0 +1,52 @@
+@import "../../styles/variables.less";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.landing {
+  background-color: @color-white;
+
+  &__block {
+    padding: @base*7 @base*80;
+  }
+
+  * {
+    box-sizing: border-box !important;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: @window_size-hg) {
+  .landing {
+    &__block {
+      padding: @base*7 @base*50;
+    }
+  }
+}
+
+@media (max-width: @window_size-lg) {
+  .landing {
+    &__block {
+      padding: @base*7 @base*15;
+    }
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .landing {
+    &__block {
+      padding: @base*4 @base*6;
+    }
+  }
+}
+
+@media (max-width: @window_size-sm) {
+}
+
+@media (max-width: @window_size-xs) {
+}

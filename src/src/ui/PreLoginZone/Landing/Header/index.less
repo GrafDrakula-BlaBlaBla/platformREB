@@ -1,0 +1,60 @@
+@import "../../../styles/variables.less";
+
+.header {
+  display: flex;
+  width: 100%;
+  flex: 0 0 auto;
+
+  &-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  &-logo {
+    flex: 0 0 auto;
+    margin-right: 50px;
+    padding-top: 9px;
+    display: flex;
+  }
+  &-links {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 8px 0;
+
+    & .header-list {
+      flex-wrap: wrap;
+    }
+    & .header-item a {
+      padding: 8px 0;
+    }
+  }
+  &-buttons {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .header {
+    &-logo {
+      display: none;
+    }
+    &-links {
+      justify-content: flex-start;
+    }
+    &-buttons {
+      flex: 1 1 auto;
+      margin-left: 20px;
+
+      & .header-list {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

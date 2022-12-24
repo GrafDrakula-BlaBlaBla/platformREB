@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.less";
+
+.payment-edit {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px @color-separation-line;
+  padding: @base * 4;
+
+  &__add {
+    margin-top: @base * 4;
+    width: fit-content;
+  }
+  &_empty &__add {
+    margin-top: 0;
+  }
+
+  &-value {
+    margin-top: @base * 4;
+    &:first-child {
+      margin: 0;
+    }
+  }
+}

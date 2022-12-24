@@ -1,0 +1,86 @@
+@base: 4px;
+
+// размеры окон
+@window_size-xs: 425px;
+@window_size-sm: 768px;
+@window_size-md: 1024px;
+@window_size-lg: 1280px;
+@window_size-hg: 1600px;
+
+// цвета
+@color-light-blue: #008fd2;
+@color-navy: #00469d;
+@color-red: #d23200;
+@color-green: #21a038;
+@color-white: #ffffff;
+@color-black: #000000;
+@color-dark-gray: #333333;
+@color-base-gray: #d7d7d7;
+@color-base-lighter-gray: #bdbdbd;
+@color-light-gray: #e9e9e9;
+@color-light-gray-blue: #eff1f3;
+@color-lightest-gray-blue: #f8fafc;
+@color-gray: #9b9b9b;
+@color-orange: orange;
+@color-input-disabled: #f5f7fa;
+@color-list: #565b63;
+@color-tooltip: #565b63;
+
+// z-index
+.z-index-back() {
+  z-index: 1;
+}
+.z-index-middle() {
+  z-index: 2;
+}
+.z-index-front() {
+  z-index: 3;
+}
+
+// специальные цвета
+@color-page-background: #ebf0f5;
+@color-background-gray: #fcfcfc;
+@color-border: #ebebeb;
+@color-separation-line: #dfe5ea;
+@color-label-text: #96a2a7;
+@color-button-hover: #007bbe;
+@color-background-disable: #d7d7d7;
+@color-actions-active: #737373;
+@color-actions-no-active: #c5cad0;
+@color-control-disabled: #f5f7fa;
+@color-background-chat: @color-lightest-gray-blue;
+
+// шрифты
+@font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+@font-family-path: "../../assets/fonts/roboto/";
+
+.font-large-title() {
+  font-family: @font-family;
+  font-size: @base * 7;
+  font-weight: 500;
+  line-height: @base * 8;
+  letter-spacing: 0.4px;
+}
+.font-title() {
+  font-family: @font-family;
+  font-size: @base * 6;
+  font-weight: 500;
+  line-height: @base * 7;
+  letter-spacing: 0.4px;
+}
+.font-subtitle() {
+  font-family: @font-family;
+  font-size: @base * 3 + 2px;
+  font-weight: 500;
+  line-height: @base * 4 + 2px;
+}
+.font-regular() {
+  font-family: @font-family;
+  font-size: @base * 3 + 2px;
+  font-weight: 400;
+  line-height: @base * 4 + 2px;
+}
+
+// прочее
+@border-radius-default: @base + 2;
+@header-height: @base * 21;

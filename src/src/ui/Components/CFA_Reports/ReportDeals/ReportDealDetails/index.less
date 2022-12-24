@@ -1,0 +1,42 @@
+@import "../../../../styles/variables.less";
+
+.report-deal-details {
+  padding: @base * 2;
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: @base * 3 @base * 12;
+    padding: @base * 5 @base * 5 @base * 7;
+
+    & .form-section {
+      margin: 0;
+    }
+    & .form-field__label {
+      font-weight: normal;
+      line-height: normal;
+      color: @color-gray;
+    }
+
+    & .form-field_row {
+      justify-content: space-between;
+    }
+    & .form-field_row .form-field__title {
+      width: auto;
+      margin-right: 20px;
+      flex: 1 1 auto;
+    }
+    & .form-field_row .form-field__content {
+      margin-top: 0;
+      flex: 0 0 auto;
+    }
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .report-deal-details {
+    & .form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

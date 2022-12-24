@@ -1,0 +1,29 @@
+@import "../../styles/variables.less";
+
+.registration {
+  & .page-auth-licence {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .registration {
+    & .page-layout__footer {
+      flex-direction: column-reverse;
+    }
+    & .page-auth-licence {
+      margin-top: @base * 5;
+    }
+  }
+}
+
+@media (max-width: @window_size-xs) {
+  .registration {
+    & .page-layout__footer {
+      & .btn {
+        width: 100%;
+      }
+    }
+  }
+}

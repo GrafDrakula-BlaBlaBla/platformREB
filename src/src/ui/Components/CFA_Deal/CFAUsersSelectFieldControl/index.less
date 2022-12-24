@@ -1,0 +1,30 @@
+@import "../../../styles/variables.less";
+
+.cfa-users-select-field-control {
+
+  &__value {
+    display: flex;
+    overflow: hidden;
+
+    &-title {}
+    &-names {
+      color: @color-gray;
+      margin-left: @base + 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &.MuiFormControl-root {
+    width: @base * 106;
+  }
+
+  &__menu {}
+  &__menu &__fio {
+    flex: 1 1 auto;
+  }
+  &__menu &__deals {
+    color: @color-gray;
+    margin: 0 0 0 @base * 3;
+  }
+}

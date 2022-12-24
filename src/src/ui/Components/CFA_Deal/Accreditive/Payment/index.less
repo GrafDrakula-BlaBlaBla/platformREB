@@ -1,0 +1,68 @@
+@import "../../../../styles/variables.less";
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: @border-radius-default;
+    border: solid 1px @color-separation-line;
+    background-color: @color-light-gray-blue;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: @base * 4;
+
+    &-name {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+    }
+    &-title {
+      display: flex;
+      margin-right: @base * 2;
+      font-weight: 500;
+    }
+    &-amount {
+      display: flex;
+      flex: 1 1 auto;
+    }
+    &-arrow {
+      display: flex;
+      flex: 0 0 auto;
+      margin-left: @base * 4;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover &-arrow {
+      color: @color-gray
+    }
+  }
+
+  &_collapsed &__content {
+    display: none;
+  }
+
+  &__helper-text {
+    font-size: 0.75rem;
+    margin-top: @base * 2 + 2;
+    text-align: left;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+  }
+
+  &_error &__block {
+    border-color: @color-red;
+  }
+  &_error &__helper-text {
+    color: @color-red;
+  }
+}

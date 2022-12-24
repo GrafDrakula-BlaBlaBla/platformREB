@@ -1,0 +1,49 @@
+@import "../../../../styles/variables.less";
+
+.cfa-export-contract-preliminary-form {
+  &__input {
+    width: @base * 100;
+  }
+  &__input-date {
+    width: @base * 50;
+  }
+
+  &__input-tn-code {
+    width: @base * 50;
+  }
+  &__item-tn-code {
+    display: flex;
+    align-items: center;
+    margin-top: @base * 3;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__button-add-tn-code {
+    margin-top: @base * 3;
+  }
+  &__button-delete-tn-code {
+    width: @base * 3;
+    height: @base * 3;
+    padding: 0;
+    margin-left: @base * 5 + 2;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+    & svg {
+      width: @base * 3;
+      height: @base * 3;
+
+      &:hover {
+        cursor: pointer;
+        & path {
+          fill: @color-dark-gray;
+        }
+      }
+    }
+  }
+}

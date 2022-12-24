@@ -1,0 +1,98 @@
+@import "../../styles/variables.less";
+
+.page-auth-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  color: @color-black;
+  background-color: @color-white;
+
+  &__left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 4%;
+    box-sizing: border-box;
+    overflow: auto;
+    align-items: center;
+    position: relative;
+  }
+
+  &__right {
+    width: 60%;
+    background: url(../../../assets/png/pageUserConfirm/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    height: @base * 20;
+    width: @base * 50;
+    background: url("../../../assets/png/pageUserConfirm/logo.png") no-repeat
+      center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  &__content {
+    max-width: @base * 90;
+    padding: 0 5%;
+    flex: 1 1 auto;
+    margin-top: @base * 30;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer {
+    color: @color-gray;
+    text-align: center;
+    margin-top: @base * 13;
+  }
+}
+
+@media (max-width: @window_size-lg) {
+  .page-auth-layout {
+    &__left {
+      width: 50%;
+    }
+
+    &__right {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .page-auth-layout {
+    &__left {
+      width: 60%;
+    }
+
+    &__right {
+      width: 40%;
+    }
+
+    &__content {
+      margin-top: @base * 20;
+    }
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .page-auth-layout {
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      display: none;
+    }
+
+    &__content {
+      margin-top: @base * 10;
+    }
+  }
+}

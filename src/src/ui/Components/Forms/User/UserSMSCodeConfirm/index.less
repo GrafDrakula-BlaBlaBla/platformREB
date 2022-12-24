@@ -1,0 +1,27 @@
+@import "../../../../styles/variables.less";
+
+.user-sms-code-confirm {
+  .form-field__content {
+    margin-top: @base * 8;
+    justify-content: center;
+    text-align: center;
+  }
+  .form-field__title {
+    justify-content: center;
+  }
+  .form-field__label {
+    font-weight: normal;
+  }
+  .sms-code-field-control {
+    align-items: center;
+  }
+
+  & .timer {
+    margin-top: @base * 8;
+    color: @color-label-text;
+
+    & + .link {
+      margin-top: @base * 13;
+    }
+  }
+}

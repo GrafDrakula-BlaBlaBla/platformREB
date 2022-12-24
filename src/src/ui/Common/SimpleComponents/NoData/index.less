@@ -1,0 +1,26 @@
+@import "../../../styles/variables.less";
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+
+  &__message {
+    max-width: @base*120;
+    text-align: center;
+    margin: @base * 5 0 0;
+    color: @color-gray;
+    .font-regular();
+  }
+
+  & .MuiSvgIcon-root {
+    font-size: @base * 20;
+    color: @color-separation-line;
+  }
+
+  & > .btn {
+    margin-top: @base * 10;
+  }
+}

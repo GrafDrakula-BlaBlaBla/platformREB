@@ -1,0 +1,16 @@
+@import "src/ui/styles/variables";
+
+.Error-Boundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .Error-text {
+    color: #9b9b9b;
+    padding-top: @base * 6;
+    padding-bottom: @base * 12;
+    .font-regular();
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../../styles/variables.less";
+
+.finance-modal {
+  .MuiDialog-container {
+    .MuiDialog-paperWidthSm {
+      min-height: 0;
+    }
+  }
+
+  ul {
+    line-height: @base * 6;
+    padding-inline-start: @base * 5;
+    margin: 0;
+  }
+
+  &-content {
+    padding: @base;
+
+    &_pre-export {
+      ul {
+        list-style-type: decimal;
+      }
+    }
+    &_post-export {
+      ul {
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../../../styles/variables.less";
+
+.user-sms-code-not-receive {
+  .form-field {
+    padding-top: @base * 4;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &__content {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: @base * 8 + 2;
+    height: @base * 10;
+    margin-right: @base * 6;
+    background: url("../../../../../assets/svg/menu/Hexagon.svg") no-repeat center;
+  }
+
+  &__section1 {
+    margin-bottom: @base * 5;
+  }
+  &__section2 {
+    margin-left: @base * 14 + 2;
+    margin-bottom: @base * 15;
+    display: flex;
+
+    & .form-section__content {
+      display: flex;
+    }
+  }
+  &__section3 {}
+
+  &__support {
+    margin-left: @base * 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-phone {
+      font-size: 21px;
+      font-weight: 400;
+    }
+    &-sheduler {
+      font-size: 11px;
+      font-weight: 400;
+      color: @color-label-text;
+      margin-top: @base + 2;
+    }
+  }
+
+  & .link {
+    text-align: center;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../styles/variables.less";
+
+.attachment-single-file {
+  display: flex;
+  align-items: flex-start;
+  padding: @base * 4;
+  background-color: @color-background-chat;
+  border-radius: @border-radius-default;
+
+  &_is-download:hover {
+    background-color: fade(@color-border, 60);
+    cursor: pointer;
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    color: @color-actions-no-active;
+  }
+  &__info {
+    flex: 1 1 auto;
+    margin: 0 @base * 3;
+  }
+  &__name {
+    color: @color-black;
+    margin-bottom: @base;
+  }
+  &__size {
+    color: @color-actions-active;
+  }
+  &__buttons {
+    flex: 0 0 auto;
+    color: @color-actions-no-active;
+    display: flex;
+    align-items: center;
+  }
+  &__remove:hover {
+    color: @color-actions-active;
+    cursor: pointer;
+  }
+  &__no-data {
+    color: @color-gray;
+  }
+}

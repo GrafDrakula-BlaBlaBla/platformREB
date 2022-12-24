@@ -1,0 +1,30 @@
+@import "../../../../styles/variables.less";
+
+.about-item {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  &__icon {
+    height: 95px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+    color: @color-actions-active;
+    margin-top: 20px;
+  }
+}

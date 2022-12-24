@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.less";
+
+.accreditive-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: @base * 8;
+  height: 100%;
+
+  &__title {
+    .font-title();
+    margin-bottom: @base * 5;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1 1 auto;
+  }
+}

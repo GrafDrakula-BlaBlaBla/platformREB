@@ -1,0 +1,91 @@
+@import "../../../../styles/variables.less";
+
+.payment-edit-value {
+  display: flex;
+  flex-direction: column;
+  border-radius: @border-radius-default;
+  overflow: hidden;
+  border: solid 1px @color-separation-line;
+  background-color: @color-white;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: @base * 4;
+
+    & > div {
+      margin-right: @base * 3;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-button {
+      display: flex;
+      flex: 0 0 auto;
+      color: @color-actions-no-active;
+    }
+    &-name {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+    }
+    &-amount {
+      display: flex;
+      margin-right: @base;
+    }
+    &-date {
+      display: flex;
+      margin-left: @base;
+      color: @color-gray;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover &-button_collapse {
+      color: @color-actions-active;
+    }
+  }
+  &__footer {
+    margin-top: @base * 6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: @base * 4;
+
+    & .btn {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__header-button_delete {
+    display: none;
+    &:hover {
+      color: @color-actions-active;
+    }
+  }
+  &:hover &__header-button_delete {
+    display: flex;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: @base * 6 @base * 4;
+    border-top: solid 1px @color-separation-line;
+    padding: @base * 4;
+
+    & .form-field {
+      padding: 0;
+
+      &.full {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      &.half {}
+    }
+  }
+  &_collapsed &__content {
+    display: none;
+  }
+}

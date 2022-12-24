@@ -1,0 +1,54 @@
+@import "../../../../styles/variables.less";
+
+.checkbox-field-control {
+  width: fit-content;
+
+  .MuiFormControlLabel-root {
+    margin-left: 0;
+  }
+
+  &.MuiFormControl-root {
+    & .MuiFormControlLabel-label {
+      .font-regular();
+    }
+
+    & .MuiIconButton-root {
+      &:hover {
+        background-color: fade(@color-light-blue, 10);
+      }
+
+      &.Mui-checked {
+        color: @color-light-blue;
+        & .MuiSvgIcon-root {
+          color: @color-light-blue;
+        }
+      }
+    }
+
+    & .Mui-disabled {
+      background-color: transparent;
+      color: @color-actions-no-active;
+      cursor: not-allowed;
+
+      & svg {
+        fill: @color-actions-no-active;
+      }
+    }
+  }
+
+  &.field-control-error {
+    &.MuiFormControl-root {
+      & .MuiIconButton-root {
+        color: @color-red;
+
+        & .MuiSvgIcon-root {
+          color: @color-red;
+        }
+
+        &:hover {
+          background-color: fade(@color-red, 10);
+        }
+      }
+    }
+  }
+}

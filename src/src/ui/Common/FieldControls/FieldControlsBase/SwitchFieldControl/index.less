@@ -1,0 +1,37 @@
+@import "../../../../styles/variables.less";
+
+.switch-field-control {
+  width: fit-content;
+
+  &.field-control-error {
+    &.MuiFormControl-root {
+      & .MuiButtonBase-root {
+        & + .MuiSwitch-track {
+          background-color: fade(@color-red, 50);
+        }
+
+        &.Mui-checked {
+          & + .MuiSwitch-track {
+            background-color: @color-red;
+          }
+        }
+      }
+    }
+  }
+
+  &.MuiFormControl-root {
+    & .MuiFormControlLabel-root {
+      margin-left: -@base * 2;
+      margin-right: 0;
+
+      & .MuiFormControlLabel-label {
+        margin: 0 @base;
+        .font-regular();
+      }
+    }
+
+    & .Mui-disabled {
+      cursor: not-allowed;
+    }
+  }
+}

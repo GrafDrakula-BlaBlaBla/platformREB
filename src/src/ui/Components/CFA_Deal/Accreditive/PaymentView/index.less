@@ -1,0 +1,30 @@
+@import "../../../../styles/variables.less";
+
+.payment-view {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px @color-separation-line;
+
+  & table {
+    border-collapse: collapse;
+     & th,
+     & td {
+       padding: @base*3 @base*2;
+       font-weight: normal;
+
+       &:first-child {
+         padding-left: @base*4;
+       }
+       &:last-child {
+         padding-right: @base*4;
+       }
+     }
+    & th {
+      color: @color-gray;
+    }
+
+    & tr:nth-child(even) td {
+      background-color: @color-white;
+    }
+  }
+}

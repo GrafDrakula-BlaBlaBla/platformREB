@@ -1,0 +1,29 @@
+@import "../../styles/variables.less";
+
+.page-controls {
+  & .form-section__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: @base * 6;
+  }
+
+  & .form-field {
+    padding: 0;
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .page-controls {
+    & .form-section__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .page-controls {
+    & .form-section__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

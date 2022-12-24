@@ -1,0 +1,36 @@
+@import "../../../styles/variables.less";
+
+.users {
+  &-table {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    & .table__container {
+      padding-top: @base * 3;
+    }
+
+    & .no-data {
+      flex: 1 1 auto;
+
+      & .no-user-icon {
+        fill: @color-light-gray;
+        width: @base * 25;
+        height: @base * 25;
+      }
+    }
+  }
+
+  &-footer {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin: @base * 8;
+  }
+
+  &-modal {
+    & .modal-page-body {
+      min-height: auto;
+    }
+  }
+}

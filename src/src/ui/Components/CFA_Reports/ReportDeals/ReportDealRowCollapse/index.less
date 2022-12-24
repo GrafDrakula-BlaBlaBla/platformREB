@@ -1,0 +1,89 @@
+@import "../../../../styles/variables.less";
+
+.report-deal-row {
+  height: 1px;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__cell {
+    &.MuiTableCell-root {
+      padding: @base * 2 0 0 0;
+      vertical-align: top;
+      height: inherit;
+    }
+    &-content {
+      padding: @base * 3 @base * 3 @base * 5;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    &:first-child {
+      &.MuiTableCell-root {
+        padding-left: @base * 2;
+      }
+    }
+    &:last-child {
+      &.MuiTableCell-root {
+        padding-right: @base * 2;
+      }
+    }
+  }
+  &_open &__cell {
+    &.MuiTableCell-root {
+      border-bottom: none;
+    }
+    &-content {
+      padding-top: @base * 3 - 1;
+      border-top: solid 1px @color-base-lighter-gray;
+      background-color: @color-lightest-gray-blue;
+      border-bottom: solid 1px @color-separation-line;
+    }
+    &:first-child {
+      & .report-deal-row__cell-content {
+        padding-left: @base * 3 - 1;
+        border-left: solid 1px @color-base-lighter-gray;
+        border-top-left-radius: @border-radius-default;
+      }
+    }
+    &:last-child {
+      & .report-deal-row__cell-content {
+        padding-right: @base * 3 - 1;
+        border-right: solid 1px @color-base-lighter-gray;
+        border-top-right-radius: @border-radius-default;
+      }
+    }
+  }
+
+  &__collapse &__cell {
+    &.MuiTableCell-root {
+      padding: 0 @base * 2;
+      border-bottom: none;
+    }
+  }
+  &__collapse_open &__cell {
+    &.MuiTableCell-root {
+      border-bottom: none;
+    }
+  }
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px @color-base-lighter-gray;
+    border-top: none;
+    border-bottom-right-radius: @border-radius-default;
+    border-bottom-left-radius: @border-radius-default;
+  }
+  &__footer {
+    background-color: @color-lightest-gray-blue;
+    padding: @base * 4;
+    border-bottom-right-radius: @border-radius-default;
+    border-bottom-left-radius: @border-radius-default;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__collapse:last-child&__collapse_open &__cell {
+    padding-bottom: @base * 2;
+  }
+}

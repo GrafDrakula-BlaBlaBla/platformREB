@@ -1,0 +1,53 @@
+@import "../../../styles/variables.less";
+
+.confirm-dialog {
+  &.MuiDialog-root .MuiDialog-paperWidthSm {
+    min-width: @base * 150;
+    min-height: auto;
+  }
+
+  & .modal-page-body {
+    padding: 0 @base * 6;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: @base * 7;
+  }
+  &__title {
+    font-family: @font-family;
+    font-size: @base * 5 + 1;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.4px;
+    text-align: center;
+    margin-bottom: @base * 9;
+  }
+  &__text {
+    .font-regular();
+    text-align: center;
+    color: @color-gray;
+    margin-top: -@base * 5;
+    margin-bottom: @base * 12;
+  }
+  &__footer {
+    display: flex;
+    margin-bottom: @base * 13;
+
+    & .btn {
+      margin-left: @base * 4;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.red {
+        border: 1px solid #d0d7dd;
+        color: @color-red;
+        &:hover {
+          border: 1px solid @color-red;
+        }
+      }
+    }
+  }
+}

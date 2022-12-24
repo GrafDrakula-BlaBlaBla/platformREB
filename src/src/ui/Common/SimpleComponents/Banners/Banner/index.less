@@ -1,0 +1,27 @@
+@import "../../../../styles/variables";
+
+.banner {
+  display: flex;
+  flex: 1 1 auto;
+  height: @base * 47 + 2;
+  background-color: @color-white;
+  border-radius: @border-radius-default;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 25px #c8d4e0;
+    margin-top: -4px;
+  }
+
+  &__block {
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    color: @color-black;
+
+    &:hover {
+      color: @color-black;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../styles/variables.less";
+
+.dashboard-header {
+  display: flex;
+
+  &__title {
+    flex: 1 1 auto;
+    .font-large-title();
+    line-height: @base * 12 + 2;
+  }
+  &__buttons {
+    & > .btn {
+      margin-left: @base * 4;
+      z-index: 4;
+
+      &__backward {
+        z-index: 2;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

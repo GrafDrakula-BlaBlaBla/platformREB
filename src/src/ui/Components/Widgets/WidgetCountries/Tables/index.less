@@ -1,0 +1,55 @@
+@import "../../../../styles/variables.less";
+
+.country-table {
+  display: flex;
+  flex: 1 1 auto;
+
+  &__country-name {
+    display: flex;
+
+    &__flag + &__text {
+      margin-left: @base * 4;
+    }
+  }
+
+  .table__container {
+    flex: 0 0 auto;
+    padding: 0;
+    border: 1px solid @color-separation-line;
+    border-radius: @base * 2;
+
+    .table-header {
+      background-color: @color-background-gray;
+
+      &__cell {
+        border-right: 1px solid @color-separation-line;
+        padding: @base * 5;
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+    }
+    .table-row {
+      &__cell {
+        border-right: 1px solid @color-separation-line;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: @base * 5;
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+
+      &:last-of-type > .table-row__cell {
+        border-bottom: none;
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

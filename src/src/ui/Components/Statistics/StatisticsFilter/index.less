@@ -1,0 +1,34 @@
+@import "../../../styles/variables.less";
+
+.statistics-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -@base * 4;
+
+  &-left,
+  &-right {
+    & > .field-control {
+      margin-right: @base * 4;
+      margin-bottom: @base * 4;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-left {}
+  &-right {
+    margin-left: @base * 4;
+  }
+
+  & .select-field-control {
+    width: 330px;
+  }
+  & .date-interval-field-control {
+    width: auto;
+
+    & .field-control {
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../../../styles/variables.less";
+
+.multi-select-field-control {
+  &.MuiFormControl-root {
+    & .MuiOutlinedInput-input {
+      padding-right: @base * 8;
+    }
+  }
+
+  &__menu {
+    & .MuiList-root .MuiListItem-root {
+      .font-regular();
+    }
+  }
+
+  &.field-control_no-data {
+    & .MuiInputBase-input {
+      color: @color-gray;
+    }
+  }
+}

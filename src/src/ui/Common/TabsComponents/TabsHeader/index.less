@@ -1,0 +1,50 @@
+@import "../../../styles/variables";
+
+.tabs__header {
+  flex: 0 0 auto;
+  box-shadow: none;
+  z-index: 1;
+  .font-regular();
+
+  & .MuiAppBar-root {
+    box-shadow: none;
+  }
+  & .MuiTabs-root {
+    overflow: visible;
+    padding: 0 @base*8;
+  }
+  & .MuiTabs-fixed {
+    margin-bottom: -1px;
+  }
+  & .MuiTabs-indicator {
+    height: @base;
+    border-top-left-radius: @border-radius-default;
+    border-top-right-radius: @border-radius-default;
+    background-color: @color-light-blue;
+  }
+
+  &-item {
+    &.MuiTab-root {
+      text-transform: none;
+      min-width: auto;
+      padding: @base*4+2 0;
+      margin-right: @base * 8;
+    }
+    &.Mui-selected {
+      color: @color-light-blue;
+    }
+    &.Mui-disabled {
+      color: @color-gray;
+    }
+
+    & .MuiTab-wrapper {
+      font-size: 15px;
+    }
+
+    &:last-child {
+      &.MuiTab-root {
+        margin-right: 0;
+      }
+    }
+  }
+}

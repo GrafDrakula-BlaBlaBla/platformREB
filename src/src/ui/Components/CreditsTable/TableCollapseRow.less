@@ -1,0 +1,71 @@
+@import "../../styles/variables.less";
+
+.table__container-custom {
+  .table__content {
+    .closeContent td {
+      border: none;
+    }
+    .openContent {
+      .Content-CollapseWrapper {
+        padding-bottom: @base*3;
+      }
+    }
+
+    .Content-Collapse {
+      padding: 0;
+      border-right: 1px solid rgba(224, 224, 224, 1);
+      border-left: 1px solid rgba(224, 224, 224, 1);
+    }
+
+    .Content-CollapseWrapper {
+      padding: 0;
+
+      &:hover {
+        background: white;
+      }
+    }
+
+    .Collapse {
+      .Collapse-Footer {
+        display: flex;
+        width: 100%;
+        height: @base*10;
+        background-color: fadeOut(@color-light-gray, 50);
+        align-items: center;
+        justify-content: flex-end;
+
+        .Footer-Delete {
+          border: none;
+          color: @color-red;
+          outline: none;
+          margin-left: @base*2+2;
+          background-color: @color-base-gray;
+          cursor: pointer;
+        }
+
+        .Footer-CollapsedButton {
+          margin-right: @base*4;
+          user-select: none;
+          cursor: pointer;
+          .font-regular();
+        }
+      }
+      .Collapse-Footer_space-between {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .Open {
+    background-color: fadeOut(@color-light-gray, 50);
+
+    .Table-BodyCell {
+      cursor: auto;
+    }
+  }
+
+  .accordion {
+    margin-left: @base * 3;
+    margin-right: @base * 3;
+  }
+}

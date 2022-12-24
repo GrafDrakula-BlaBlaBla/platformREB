@@ -1,0 +1,41 @@
+@import "../../../../styles/variables";
+
+.CreditInfo {
+  display: flex;
+  align-items: stretch;
+  padding: @base*8 @base*8 @base*8 @base*3;
+  background-color: white;
+
+  .CreditInfo-Left {
+    margin: 0 15% 0 0;
+
+    .CreditInfo-Item {
+      .Item-Label {
+        min-width: @base*50;
+      }
+    }
+  }
+
+  .CreditInfo-Rigth {
+    .CreditInfo-Item {
+      .Item-Label {
+        min-width: @base*70;
+      }
+    }
+  }
+
+  .CreditInfo-Item {
+    display: flex;
+    margin: 0 0 @base*3 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .Item-Label {
+      padding: 0 @base*9;
+      color: #96a2a7;
+      margin: 0 @base*3 0 0;
+    }
+  }
+}

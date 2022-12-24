@@ -1,0 +1,37 @@
+@import "../../../styles/variables.less";
+
+.dialog-confirm {
+  .MuiPaper-root {
+    border-radius: @border-radius-default;
+  }
+  .MuiDialog-paperWidthSm {
+    max-width: none;
+    min-width: @base * 150;
+  }
+
+  &__close {
+    float: right;
+    margin: @base*4 @base*4 0 0;
+  }
+
+  &__text {
+    text-align: center;
+    padding: @base*15 0 0 0;
+    .font-title();
+  }
+
+  &__button-group {
+    display: flex;
+    padding: @base*15 @base*30 @base*20 @base*30;
+
+    & .btn {
+      width: 178px;
+      margin-right: 16px;
+      .font-regular();
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

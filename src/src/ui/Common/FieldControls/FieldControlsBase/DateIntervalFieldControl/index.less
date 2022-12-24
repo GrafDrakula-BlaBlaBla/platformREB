@@ -1,0 +1,19 @@
+@import "../../../../styles/variables.less";
+
+.date-interval-field-control {
+  &__dates {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & .field-control {
+      margin: 0;
+    }
+  }
+  &__dates &__start {
+    margin-right: @base;
+  }
+  &__dates &__end {
+    margin-left: @base;
+  }
+}

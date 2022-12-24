@@ -1,0 +1,33 @@
+@import "../../../../styles/variables.less";
+
+.parameters-card {
+  display: flex;
+  position: relative;
+  border: 1px solid @color-base-gray;
+  border-radius: @border-radius-default;
+  background-color: @color-background-gray;
+  padding: @base*8;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  &__footer {
+    margin-top: @base * 6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: @base * 4;
+    direction: rtl;
+
+    & .btn {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    max-height: @base * 120;
+  }
+}

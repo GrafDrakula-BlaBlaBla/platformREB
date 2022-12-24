@@ -1,0 +1,54 @@
+@import "../../../../styles/variables.less";
+
+.report-date-field-control {
+  &.MuiFormControl-root {
+    & .MuiOutlinedInput-input {
+      padding-right: 0;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__popover {
+    &-root {
+      display: flex;
+      flex-direction: column;
+      width: @base * 79;
+    }
+
+    &-title {
+      padding: @base;
+      flex: 0 0 auto;
+      display: flex;
+
+      & .MuiButton-label {
+        text-transform: none;
+      }
+    }
+    &-current {
+      flex: 1 1 auto;
+    }
+
+    &-content {
+      padding: @base * 3 @base * 6 @base * 5;
+    }
+    &-quarters {
+      & .MuiRadio-colorPrimary.Mui-checked {
+        color: @color-light-blue;
+      }
+      & .MuiTypography-root {
+        font-size: 14px;
+      }
+    }
+    &-years {
+      & .MuiFormControl-root {
+        display: grid;
+        gap: @base;
+        grid-template-columns: repeat(4, 1fr);
+
+        & button.selected {
+          background-color: @color-light-gray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-height: calc(100vh - @header-height);
+
+  &__content {
+    padding: @base * 8;
+    padding-bottom: 0;
+    flex: 1 1 auto;
+    position: relative;
+  }
+
+  &__signature {
+    color: #a6a6a6;
+    .font-regular();
+    padding: @base * 5 + 2 @base * 8;
+    flex: 0 0 auto;
+  }
+}

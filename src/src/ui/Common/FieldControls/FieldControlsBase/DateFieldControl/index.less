@@ -1,0 +1,36 @@
+@import "../../../../styles/variables.less";
+
+.date-field-control {
+  &.MuiFormControl-root {
+    & .MuiOutlinedInput-input {
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__popover {
+    & .MuiPickersToolbar-toolbar,
+    & .MuiPickersDay-daySelected {
+      background-color: @color-light-blue;
+    }
+    & .MuiTypography-colorPrimary {
+      color: @color-light-blue;
+    }
+    & .MuiPickersBasePicker-pickerViewLandscape {
+      padding: 0;
+    }
+    & .MuiPickersYearSelection-container {
+      height: 300px + @base * 4;
+      overflow-y: auto;
+    }
+    & .MuiPickersCalendar-transitionContainer {
+      margin-bottom: @base * 3;
+    }
+    & .MuiPickersDay-current {
+      color: @color-light-blue;
+
+      &.MuiPickersDay-daySelected {
+        color: @color-white;
+      }
+    }
+  }
+}

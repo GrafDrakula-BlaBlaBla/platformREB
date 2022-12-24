@@ -1,0 +1,21 @@
+@import "../../../styles/variables.less";
+
+.close-svg {
+  cursor: pointer;
+
+  circle {
+    transition: all 0.3s;
+  }
+
+  rect {
+    transition: all 0.3s;
+  }
+  &:hover {
+    circle {
+      fill: @color-light-gray;
+    }
+    rect {
+      fill: @color-black;
+    }
+  }
+}

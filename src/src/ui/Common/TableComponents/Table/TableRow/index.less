@@ -1,0 +1,57 @@
+@import "../../../../styles/variables";
+
+.table-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  position: relative;
+
+  &.MuiTableRow-root:hover {
+    background-color: fadeOut(@color-light-gray, 50);
+  }
+
+  &__cell {
+    &.MuiTableCell-root {
+      .font-regular();
+      cursor: pointer;
+      vertical-align: top;
+      padding: @base*5 @base*3;
+      border-bottom: solid 1px @color-separation-line;
+    }
+
+    &_no-wrap {
+      white-space: nowrap;
+    }
+    &_actions {
+      display: flex;
+      justify-content: flex-end;
+
+      & svg {
+        cursor: pointer;
+        margin-left: @base * 3;
+        fill: @color-actions-active;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:hover {
+          fill: @color-button-hover;
+        }
+        &.no-active {
+          fill: @color-actions-no-active;
+        }
+      }
+    }
+  }
+  &:last-child &__cell {
+    &.MuiTableCell-root {
+      border-bottom: none;
+    }
+  }
+
+  &_cursor_default &__cell {
+    cursor: default;
+  }
+}

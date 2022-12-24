@@ -1,0 +1,22 @@
+@import "../../../../styles/variables.less";
+
+.widget-filter-com {
+  display: grid;
+  gap: @base * 8;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+
+  &__categories,
+  &__banks {
+    overflow: hidden;
+
+    & .btn {
+      margin-bottom: @base * 2;
+      margin-right: @base * 2;
+    }
+
+    & .segment {
+      height: 100%;
+    }
+  }
+}

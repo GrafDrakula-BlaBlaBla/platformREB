@@ -1,0 +1,111 @@
+@import "src/ui/styles/variables";
+
+.modal {
+  &.MuiDialog-root {
+    & .MuiDialog-paperWidthSm {
+      min-width: @base * 184;
+      min-height: @base * 100;
+    }
+    & .MuiDialog-paperFullScreen {
+      @margin: (@base * 8);
+      max-width: calc(100% - @margin);
+      max-height: calc(100% - @margin);
+      border-radius: @base;
+    }
+  }
+  &-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: hidden;
+    position: relative;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: @base * 6;
+      flex: 0 0 auto;
+
+      &_border {
+        border-bottom: 1px solid @color-border;
+      }
+
+      & .header-title {
+        flex: 1 1 auto;
+        overflow: hidden;
+
+        &-main {
+          font-size: @base * 6;
+          font-weight: 500;
+          line-height: normal;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        &-sub {
+          .font-regular();
+          color: @color-gray;
+          margin-top: @base * 3;
+        }
+      }
+
+      & .close-icon-modal {
+        cursor: pointer;
+        padding-left: @base * 6;
+
+        circle {
+          transition: all 0.3s;
+        }
+
+        rect {
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          circle {
+            fill: @color-light-gray;
+          }
+          rect {
+            fill: @color-black;
+          }
+        }
+      }
+    }
+    &-body {
+      padding: @base * 6;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid @color-border;
+      padding: @base * 2 @base * 6 @base * 6 @base * 2;
+      flex: 0 0 auto;
+      flex-wrap: wrap;
+
+      & .btn {
+        margin-left: @base * 4;
+        margin-top: @base * 4;
+      }
+    }
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .modal {
+    &.MuiDialog-root {
+      & .MuiDialog-paperWidthSm {
+        margin: 0;
+        width: 100%;
+        @margin: (@base * 8);
+        max-width: calc(100% - @margin);
+        max-height: calc(100% - @margin);
+        min-width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "email": "mail@mail.ru",
+  "id": "1",
+  "bankInfoId": "1",
+  "name": "TestName",
+  "password": "TestPassword",
+  "patronymic": "Patronymic",
+  "phone": "89289009090",
+  "surname": "TestSurname"
+}

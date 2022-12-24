@@ -1,0 +1,44 @@
+@import "../../../../styles/variables.less";
+
+.table-filter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: @base*8 @base*8 @base*5;
+  background-color: @color-lightest-gray-blue;
+  border-top-right-radius: @border-radius-default;
+  border-top-left-radius: @border-radius-default;
+
+  &_padding {
+    padding: @base*6 @base*6 @base*3;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    flex-wrap: wrap;
+
+    & > .field-control {
+      margin-right: @base*3;
+      margin-bottom: @base*3;
+    }
+  }
+
+  &__right {
+    & > .field-control {
+      margin-bottom: @base*3;
+    }
+  }
+
+  .field-control {
+    width: @base * 50;
+  }
+
+  .date-interval-field-control {
+    width: auto;
+    & .field-control {
+      width: @base * 50;
+    }
+  }
+}

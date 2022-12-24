@@ -1,0 +1,70 @@
+@import "../../styles/variables.less";
+
+.Export {
+  border: 1px solid @color-base-gray;
+  border-radius: @border-radius-default;
+  margin: @base*3 0;
+  overflow: hidden;
+
+  .MuiCollapse-wrapperInner & {
+    margin: 0 @base*3 @base*3;
+  }
+
+  .MuiAccordion-root.Mui-expanded {
+    margin: 0;
+  }
+
+  .exportContract {
+    display: flex;
+    align-items: center;
+    padding: 0 @base*5 0 @base*7;
+    width: auto;
+    cursor: pointer;
+
+    &.MuiAccordionSummary-root.Mui-expanded {
+      min-height: auto;
+    }
+
+    .MuiAccordionSummary-content {
+      margin: @base*4 0;
+    }
+
+    &:hover {
+      background-color: @color-base-gray;
+    }
+  }
+
+  .a-details {
+    padding: @base*7;
+  }
+
+  .MuiPaper-root {
+    box-shadow: none;
+  }
+
+  .active {
+    background-color: @color-base-gray;
+  }
+
+  .label {
+    max-width: @base*135;
+    color: @color-label-text;
+    margin-bottom: @base*4;
+  }
+
+  .value {
+    margin-bottom: @base*8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .a-footer {
+    background-color: @color-base-gray;
+    transition: padding 0.3s;
+  }
+  .a-footeractive {
+    padding-top: @base*14;
+  }
+}

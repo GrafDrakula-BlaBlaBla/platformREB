@@ -1,0 +1,24 @@
+@import "../../../../styles/variables.less";
+
+.general-agreement-form {
+  position: relative;
+
+  & .form-section__label {
+    font-size: 20px;
+  }
+
+  &__half {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 @base * 4;
+
+    & .form-field__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    & .form-field__content {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+}

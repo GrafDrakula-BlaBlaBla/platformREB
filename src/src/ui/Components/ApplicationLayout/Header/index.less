@@ -1,0 +1,63 @@
+@import "../../../styles/variables";
+
+.app-header {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: @header-height;
+  padding: @base*6 @base*8;
+  box-shadow: 0 @base - 1 @base*4+2 rgba(200, 212, 224, 0.35);
+  background-color: white;
+  z-index: 3;
+
+  &__left,
+  &__right {
+    display: flex;
+  }
+
+  &__item {
+    height: @base * 9;
+    margin-right: @base * 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &_default {
+      cursor: default;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_menu-toggle {
+      display: none;
+    }
+  }
+  &__right &__item {
+    & svg {
+      path,
+      circle {
+        fill: @color-actions-no-active;
+      }
+    }
+    & svg.active {
+      path,
+      circle {
+        fill: @color-light-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: @window_size-lg) {
+  .app-header {
+    &__item {
+      &_menu-toggle {
+        display: flex;
+      }
+    }
+  }
+}

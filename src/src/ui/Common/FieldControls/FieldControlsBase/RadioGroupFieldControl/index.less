@@ -1,0 +1,37 @@
+@import "../../../../styles/variables.less";
+
+.radio-group-field-control {
+  & .MuiRadio-colorPrimary.Mui-checked {
+    & .MuiSvgIcon-root {
+      color: @color-light-blue;
+    }
+  }
+  .MuiFormControlLabel-root {
+    margin-left: 0;
+  }
+  & .MuiTypography-root {
+    font-size: 14px;
+  }
+
+  &_vertical .MuiFormGroup-root {
+  }
+  &_horizontal .MuiFormGroup-root {
+    flex-direction: row;
+  }
+
+  &.field-control-error {
+    &.MuiFormControl-root {
+      & .MuiIconButton-root {
+        color: @color-red;
+
+        & .MuiSvgIcon-root {
+          color: @color-red;
+        }
+
+        &:hover {
+          background-color: fade(@color-red, 10);
+        }
+      }
+    }
+  }
+}

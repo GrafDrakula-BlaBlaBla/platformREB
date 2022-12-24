@@ -1,0 +1,37 @@
+@import "../../../../styles/variables.less";
+
+.cfa-report-export-contract-view-form {
+  position: relative;
+
+  & .form-section {
+    border-radius: @border-radius-default;
+    border: solid 1px @color-separation-line;
+  }
+  & .form-section__content {
+    display: table;
+    overflow: hidden;
+  }
+  & .form-field {
+    display: table-row;
+    border-bottom: solid 1px @color-separation-line;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  & .form-field__title,
+  & .form-field__content {
+    display: table-cell;
+    padding: @base * 5;
+  }
+  & .form-field__content {
+    border-left: solid 1px @color-separation-line;
+  }
+
+  & .form-field__label {
+    font-weight: normal;
+  }
+  & .field-control_is-view {
+    white-space: normal;
+  }
+}

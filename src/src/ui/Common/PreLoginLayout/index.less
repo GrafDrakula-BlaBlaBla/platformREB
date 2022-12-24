@@ -1,0 +1,88 @@
+@import "../../styles/variables.less";
+
+@margin: @base*41;
+
+.prelogin__layout {
+  .prelogin__header {
+    display: flex;
+    align-items: center;
+    height: @base*21;
+    background-color: @color-white;
+  }
+
+  .prelogin__logo {
+    margin-left: @margin;
+    cursor: pointer;
+  }
+
+  .prelogin__content {
+    min-height: calc(100vh - @base*62);
+    margin: @base*10 @base*41;
+  }
+
+  .prelogin__signature {
+    color: #a6a6a6;
+    .font-regular();
+    border-top: 2px solid rgba(202, 211, 220, 0.5);
+    padding: 32px @margin;
+  }
+
+  & .page-auth-licence {
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+@media (max-width: @window_size-hg) {
+  .prelogin__layout {
+    .prelogin__content {
+      margin: @base*10 @margin;
+    }
+
+    .prelogin__logo {
+      margin-left: @margin;
+    }
+
+    .prelogin__signature {
+      padding: 32px @margin;
+    }
+  }
+}
+
+@media (max-width: @window_size-lg) {
+  .prelogin__layout {
+    .prelogin__content {
+      margin: @base*10 @base*15;
+    }
+
+    .prelogin__logo {
+      margin-left: @base*15;
+    }
+
+    .prelogin__signature {
+      padding: 32px @base*15;
+    }
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .prelogin__layout {
+    .prelogin__content {
+      margin: @base*10 @base*6;
+    }
+
+    .prelogin__logo {
+      margin-left: @base*6;
+    }
+
+    .prelogin__signature {
+      padding: 32px @base*6;
+    }
+  }
+}
+
+@media (max-width: @window_size-sm) {
+}
+
+@media (max-width: @window_size-xs) {
+}

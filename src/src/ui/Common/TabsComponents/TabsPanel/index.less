@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.tabs__panel {
+  flex: 1 1 auto;
+  position: relative;
+
+  &_active {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    &.tabs__panel_default {
+      padding: @base * 8;
+    }
+    &.tabs__panel_table {
+    }
+    &.tabs__panel_footer {
+    }
+    &.tabs__panel_chat {
+      padding: 0;
+    }
+  }
+}

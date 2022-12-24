@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.less";
+
+.cfa-draft-confirm-export-contract {
+  & .form-section__label {
+    font-size: @base * 5;
+  }
+
+  &__document {
+    border-bottom: solid 1px @color-separation-line;
+    padding-top: @base * 5;
+    padding-bottom: @base * 5;
+    padding-right: @base * 15;
+    width: fit-content;
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}

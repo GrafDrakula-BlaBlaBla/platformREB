@@ -1,0 +1,90 @@
+@import "../../../styles/variables.less";
+
+.form-field {
+  padding-top: @base * 6;
+  overflow: hidden;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &__title {
+    display: flex;
+  }
+  &_disabled &__title {
+    color: @color-gray;
+  }
+
+  &__label {
+    .font-subtitle();
+
+    &-error {
+      color: @color-red;
+    }
+    &-success {
+      color: @color-green;
+    }
+  }
+
+  &__help {
+    display: flex;
+    align-items: center;
+    color: @color-orange;
+    margin-left: @base * 2;
+
+    & svg {
+      font-size: @base * 4 + 2;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:not(&_right):not(&_left):not(&_center) > .btn {
+      width: 100%;
+    }
+
+    &_right {
+      display: flex;
+      align-items: flex-end;
+    }
+    &_left {
+      display: flex;
+      align-items: flex-start;
+    }
+    &_center {
+      display: flex;
+      align-items: center;
+    }
+
+    & .field-control {
+      margin-top: @base * 3;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__title + &__content {
+    margin-top: @base * 3;
+  }
+
+  &_row {
+    display: flex;
+    flex-direction: row;
+    padding-top: @base * 3;
+
+    .form-field__title {
+      width: @base * 75;
+      margin-right: @base * 5;
+      flex: 0 0 auto;
+    }
+    .form-field__content {
+      margin-top: 0;
+      flex: 1 1 auto;
+    }
+  }
+}

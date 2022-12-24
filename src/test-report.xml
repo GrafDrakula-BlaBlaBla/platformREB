@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/DateYearFieldControl/index.test.tsx">
+        <testCase name="DateYearFieldControl test" duration="357" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/DateFieldControl/index.test.tsx">
+        <testCase name="DateFieldControl test" duration="315" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/CheckboxFieldControl/index.test.tsx">
+        <testCase name="CheckboxFieldControl test" duration="196" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/PhoneFieldControl/index.test.tsx">
+        <testCase name="PhoneFieldControl test" duration="198" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/RadioGroupFieldControl/index.test.tsx">
+        <testCase name="RadioGroupFieldControl test" duration="253" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/SelectFieldControl/index.test.tsx">
+        <testCase name="SelectFieldControl test" duration="517" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/SMSCodeFieldControl/index.test.tsx">
+        <testCase name="SMSCodeFieldControl test" duration="356" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/Utils/QueryParams/QueryParamsUtils.test.ts">
+        <testCase name="QueryParams test public methods Test setQueryParamsObj &amp; getQueryParamsObj" duration="69" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/MultiSelectFieldControl/index.test.tsx">
+        <testCase name="MultiSelectFieldControl test" duration="562" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/Utils/Storage/Storage.test.ts">
+        <testCase name="Storage test SStorage test" duration="2" />
+        <testCase name="Storage test LStorage test" duration="2" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/InfrastructureLayer/APIModule/__tests__/APIModule.test.ts">
+        <testCase name="APIModule getData Делаем простой запрос на сервер" duration="24" />
+        <testCase name="APIModule getData Делаем запрос на сервер с телом запроса" duration="7" />
+        <testCase name="APIModule POST Делаем POST запрос" duration="7" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/DateIntervalFieldControl/index.test.tsx">
+        <testCase name="DateIntervalFieldControl test" duration="298" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/ReportDateFieldControl/index.test.tsx">
+        <testCase name="ReportDateFieldControl test" duration="886" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/TextFieldControl/index.test.tsx">
+        <testCase name="TextFieldControl test" duration="48" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/CurrencyFieldControl/index.test.tsx">
+        <testCase name="CurrencyFieldControl test" duration="47" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/IntegrationLayer/APIClients/AttachmentAPIClient/__test__/AttachmentAPIClient.test.ts">
+        <testCase name="AttachmentAPIClient Запрос вложения" duration="444" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/IntegrationLayer/APIClients/AppAPIClient/__tests__/AppAPIClient.test.ts">
+        <testCase name="AppAPIClient Получение информации о текущем пользователе" duration="361" />
+    </file>
+    <file path="/Users/a18949418/Desktop/ufs/reb-ufs-service/src/src/ui/Common/FieldControls/FieldControlsBase/PasswordFieldControl/index.test.tsx">
+        <testCase name="PasswordFieldControl test" duration="95" />
+    </file>
+</testExecutions>

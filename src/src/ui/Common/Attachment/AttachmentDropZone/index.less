@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+.attachment-drop-zone {
+  cursor: pointer;
+  height: @base * 74;
+  width: 100%;
+  background-color: rgba(223, 229, 234, 0.1);
+  box-sizing: border-box;
+  border-radius: @border-radius-default;
+  border: 2px dashed @color-base-gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: fadeOut(@color-gray, 30);
+  }
+
+  & + div {
+    margin-top: @base * 6;
+  }
+
+  &_drag-active {
+    background-color: #f5fbfd;
+    border: 2px @color-light-blue solid;
+
+    path {
+      fill: @color-light-blue;
+    }
+  }
+
+  &__main-text {
+    margin: @base*5-2 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__secondary-text {
+    margin-bottom: @base*8;
+    color: @color-gray;
+  }
+}

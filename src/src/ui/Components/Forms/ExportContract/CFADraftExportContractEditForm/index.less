@@ -1,0 +1,41 @@
+@import "../../../../styles/variables.less";
+
+.cfa-export-contract-edit-form {
+  & .form-section__content:not(.form-section__content_collapsed) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__tn-code,
+  &__confirmed-document {
+    & .form-field__content {
+      flex-direction: row;
+
+      & .delete-icon {
+        width: @base * 3;
+        height: @base * 3;
+        margin-left: @base * 5 + 2;
+        margin-top: @base * 4 + 2;
+
+        &:hover {
+          cursor: pointer;
+          & path {
+            fill: @color-dark-gray;
+          }
+        }
+      }
+    }
+  }
+  &__confirmed-document {
+    padding-top: @base * 10;
+    margin-top: @base * 10;
+    border-top: solid 1px @color-base-gray;
+
+    &:first-child {
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  }
+}

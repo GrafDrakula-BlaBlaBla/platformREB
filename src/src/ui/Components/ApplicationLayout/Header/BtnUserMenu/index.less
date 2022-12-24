@@ -1,0 +1,63 @@
+@import "../../../../styles/variables";
+
+.btn-user-menu {
+  position: relative;
+  cursor: pointer;
+
+  &__logoutIcon {
+    width: @base*4;
+    height: @base*5;
+    margin-right: 8px;
+  }
+
+  &__popper {
+    margin-top: 15px;
+    .z-index-front();
+
+    & .MuiPaper-root {
+      border-radius: @border-radius-default;
+    }
+
+    & .MuiMenuItem-root {
+      .font-regular();
+    }
+
+    // &[x-placement="bottom"] {
+    //   &:before {
+    //     position: absolute;
+    //     content: "";
+    //     display: block;
+    //     top: -16px;
+    //     right: 25px;
+    //     border-width: 8px;
+    //     border-color: transparent transparent @color-list transparent;
+    //     border-style: solid;
+    //   }
+    // }
+  }
+}
+
+#menu-list-grow {
+  padding: 8px 6px;
+  background: @color-list;
+  box-sizing: border-box;
+  border-radius: @border-radius-default;
+
+  & li {
+    border-radius: @border-radius-default;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  & .logoutIcon {
+    margin-right: 10px;
+  }
+
+  & .MuiMenuItem-root {
+    padding: 8px 10px;
+    color: @color-white;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../../../../styles/variables.less";
+
+.cfa-parameters-edit-section {
+  & .form-section__title-left {
+    flex: 0 0 auto;
+  }
+  & .form-section__title-right {
+    flex: 1 1 auto;
+    display: flex;
+  }
+
+  &__btn {
+    color: @color-actions-no-active;
+
+    &:hover {
+      cursor: pointer;
+      color: @color-actions-active;
+    }
+  }
+
+  &__buttons-footer {
+    display: flex;
+    margin-top: @base * 8;
+
+    & .btn {
+      margin-right: @base * 5;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  & ul {
+    padding: 0;
+    line-height: 1.6;
+    margin-top: 0;
+    padding-inline-start: @base * 4;
+  }
+
+  &__goals {
+    &_edit {
+      width: @base * 100;
+
+      &-title {
+        font-size: 12px;
+        color: @color-gray;
+        margin-bottom: @base * 3;
+      }
+
+      & ul {
+        margin-bottom: @base * 2;
+        padding-inline-start: @base * 5;
+      }
+    }
+    &_view {}
+  }
+}

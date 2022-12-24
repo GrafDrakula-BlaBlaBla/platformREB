@@ -1,0 +1,46 @@
+@import "../../../../styles/variables.less";
+
+.profile-form {
+  .profile-form__input_big {
+    width: @base*105;
+  }
+  .profile-form__input_little {
+    width: @base*55;
+  }
+
+  .profile-form__phone {
+    display: flex;
+    align-items: center;
+
+    .success-icon {
+      margin-left: @base*3;
+    }
+  }
+
+  .notify {
+    margin-top: @base*8;
+  }
+  .information {
+    width: @base*89;
+    margin-top: @base*4;
+  }
+}
+
+@media (max-width: @window_size-sm) {
+  .profile-form {
+    .profile-form__input_big {
+      width: 100%;
+    }
+    .information {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: @window_size-xs) {
+  .profile-form {
+    .profile-form__input_big,
+    .profile-form__input_little {
+      width: 100%;
+    }
+  }
+}

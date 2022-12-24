@@ -1,0 +1,26 @@
+@import "../../styles/variables.less";
+
+.discussion {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: @color-white;
+
+  .discussion__messages {
+    display: flex;
+    flex-direction: column;
+    padding: 0 @base*8 @base*4;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    background-color: @color-background-chat;
+
+    .message__divider {
+      margin-bottom: @base*6;
+    }
+  }
+
+  .discussion__controls {
+    padding-top: 32px;
+  }
+}

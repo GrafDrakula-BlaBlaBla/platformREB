@@ -1,0 +1,59 @@
+@import "../../../styles/variables.less";
+
+.dashboard-widget {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: @color-white;
+  border-radius: @border-radius-default;
+  z-index: 4;
+  position: relative;
+  overflow: hidden;
+
+  &-backdrop {
+    border-radius: @border-radius-default;
+    background: rgba(@color-black, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  &-backdrop_visible {
+    border-radius: @border-radius-default;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  &-header {
+    flex: 0 0 auto;
+    display: flex;
+    padding: @base * 5 @base * 8;
+    border-bottom: solid 1px @color-separation-line;
+  }
+  &-title {
+    flex: 1 1 auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    padding: @base * 2 + 3 0;
+  }
+  &-buttons {
+    flex: 0 0 auto;
+
+    & .btn {
+      z-index: 4;
+    }
+  }
+  &-content {
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+}

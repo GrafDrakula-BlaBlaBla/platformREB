@@ -1,0 +1,67 @@
+@import "../../../styles/variables.less";
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  .react-grid-item {
+    border-radius: @border-radius-default;
+    background-color: transparent;
+    z-index: 1;
+
+    &.react-grid-placeholder {
+      box-sizing: border-box;
+      border: none;
+      opacity: 0.1;
+      background-color: @color-light-blue;
+    }
+    &.react-draggable-dragging,
+    &.resizing {
+      box-shadow: 0 0 20px rgba(@color-black, 0.1);
+      z-index: 5;
+    }
+  }
+  .react-draggable {
+    & .dashboard-widget {
+      cursor: grab;
+    }
+  }
+  .react-resizable {
+    & .react-resizable-handle {
+      background-image: none;
+      z-index: 4;
+
+      &:after {
+        background-color: @color-separation-line;
+        border-radius: 10px;
+        right: 15px;
+        bottom: 15px;
+        width: 8px;
+        height: 8px;
+        border: none;
+      }
+      &:hover {
+        &:after {
+          background-color: @color-light-blue;
+        }
+      }
+    }
+  }
+
+  &_backdrop {
+    &:before {
+      content: "";
+      background: rgba(@color-black, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+
+    & .react-grid-item {
+      z-index: 4;
+    }
+  }
+}

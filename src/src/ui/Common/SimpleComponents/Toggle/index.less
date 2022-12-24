@@ -1,0 +1,24 @@
+@import "src/ui/styles/variables";
+
+.toggle-button-group.MuiToggleButtonGroup-root {
+  border-radius: 100px;
+  padding: 2px;
+  background-color: white;
+  width: min-content;
+
+  .MuiToggleButton-root.toggle-button-item {
+    border-radius: 100px;
+    border: none;
+    width: 120px;
+    color: black;
+    background-color: white;
+    margin-right: 1px;
+    margin-left: 1px;
+    text-transform: none;
+
+    &.Mui-selected {
+      color: white;
+      background-color: @color-light-blue;
+    }
+  }
+}

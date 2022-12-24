@@ -1,0 +1,25 @@
+@import "../../../../styles/variables.less";
+
+.user-profile-view-form {
+  position: relative;
+
+  & .fio .form-field__content {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    align-items: center;
+
+    & .field-control {
+      flex: 1 1 auto;
+    }
+
+    & .MuiSvgIcon-root {
+      fill: @color-actions-no-active;
+      cursor: pointer;
+
+      &:hover {
+        fill: @color-actions-active;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../styles/variables.less";
+
+.dialog-user-delete-error {
+  &.modal.MuiDialog-root .MuiDialog-paperWidthSm {
+    min-width: 600px;
+    min-height: 325px;
+  }
+  & .modal-page-header {
+    border: none;
+    padding-bottom: 6px;
+  }
+  & .modal-page-body {
+    align-items: center;
+    padding-top: 0;
+  }
+
+  &__title {
+    font-size: @base * 5 + 1;
+    font-weight: 500;
+    margin-top: @base * 8;
+    text-align: center;
+  }
+  &__message {
+    font-size: @base * 3 + 2;
+    font-weight: 400;
+    margin-top: @base * 8;
+    color: @color-label-text;
+    text-align: center;
+  }
+}

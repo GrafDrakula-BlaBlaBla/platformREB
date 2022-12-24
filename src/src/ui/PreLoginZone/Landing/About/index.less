@@ -1,0 +1,19 @@
+@import "../../../styles/variables.less";
+
+.about {
+  &-items {
+    padding: @base * 10 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: @base * 10;
+    row-gap: @base * 5;
+  }
+}
+
+@media (max-width: @window_size-md) {
+  .about {
+    &-items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

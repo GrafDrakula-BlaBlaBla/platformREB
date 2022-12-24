@@ -1,0 +1,56 @@
+@import "../../../../../../styles/variables.less";
+
+.territorial-bank {
+  display: flex;
+  flex-direction: column;
+  max-width: @base * 126;
+  border: solid 1px @color-base-gray;
+  border-radius: @border-radius-default;
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: @base * 4;
+  }
+  &__name {
+    flex: 1 1 auto;
+
+    &_no-data {
+      color: @color-actions-active;
+    }
+  }
+  &__collapse {
+    display: flex;
+    color: @color-actions-no-active;
+    cursor: pointer;
+
+    &:hover {
+      color: @color-actions-active;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 @base * 4 @base * 4;
+  }
+  &__buttons {
+    margin-top: @base * 4;
+    display: flex;
+    flex-direction: column;
+
+    & .btn {
+      margin-bottom: @base * 4;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &_collapsed {
+    .territorial-bank__content {
+      display: none;
+    }
+  }
+}

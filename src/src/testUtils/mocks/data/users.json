@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "email": "mail@mail.ru",
+      "id": "1",
+      "bankInfoId": "1",
+      "name": "TestName",
+      "password": "TestPassword",
+      "patronymic": "Patronymic",
+      "phone": "89289009090",
+      "surname": "TestSurname"
+    },
+    {
+      "email": "mail@mail.ru",
+      "id": "2",
+      "bankInfoId": "1",
+      "name": "TestName",
+      "password": "TestPassword",
+      "patronymic": "Patronymic",
+      "phone": "89289009090",
+      "surname": "TestSurname"
+    },
+    {
+      "email": "mail@mail.ru",
+      "id": "3",
+      "bankInfoId": "2",
+      "name": "TestName",
+      "password": "TestPassword",
+      "patronymic": "Patronymic",
+      "phone": "89289009090",
+      "surname": "TestSurname"
+    }
+  ],
+  "pagination": {
+    "count": 3,
+    "offset": 0,
+    "hasNextPage": false
+  }
+}

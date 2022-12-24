@@ -1,0 +1,40 @@
+@import "../../../../styles/variables.less";
+
+.segment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+
+  & .segment-title {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    & label {
+      margin-right: 0;
+      user-select: none;
+    }
+
+    & span {
+      .font-title();
+      font-size: @base * 5;
+    }
+  }
+  & .segment-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  & .tag-segment {
+    margin-bottom: 10px;
+  }
+
+  & .tag-segment:last-child {
+    margin-bottom: 0;
+  }
+}

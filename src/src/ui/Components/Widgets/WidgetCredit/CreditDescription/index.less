@@ -1,0 +1,27 @@
+@import "../../../../styles/variables.less";
+
+.credit-description {
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    padding-right: @base * 10;
+  }
+
+  &__text {
+    line-height: 20px;
+    vertical-align: center;
+  }
+  &__box {
+    content: "";
+    display: inline-block;
+
+    margin: 4px 20px 4px 0;
+    width: 36px;
+    height: 13px;
+
+    border-radius: 0px 5px 5px 0px;
+  }
+}
